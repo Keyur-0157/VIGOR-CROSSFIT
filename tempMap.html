@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Google Map with 3 Icons</title>
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+  <style>
+    #map {
+      height: 400px;
+      width: 100%;
+      position: relative;
+    }
+    .map-icon {
+      position: absolute;
+      cursor: pointer;
+    }
+    .map-icon img {
+      width: 30px;
+      height: 30px;
+    }
+    .map-icon-popup {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <div class="map-icon" style="top: 100px; left: 100px;">
+    <img src="1.png" alt="Icon 1">
+    <div class="map-icon-popup">
+      <p>Icon 1 Popup</p>
+    </div>
+  </div>
+  <div class="map-icon" style="top: 200px; left: 200px;">
+    <img src="3.png" alt="Icon 2">
+    <div class="map-icon-popup">
+      <p>Icon 2 Popup</p>
+</div>
+</div>
+</body>
+</html>

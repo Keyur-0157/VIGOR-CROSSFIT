@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>VIGOR</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <link rel="stylesheet" href="myStyle.css" />
+</head>
+
+<body>
+    <div class="mainbody">
+        <div id="mobileMenuOverlay" class="mobile-menu-overlay"></div>
+        <header class="site-header">
+            <div class="section-container">
+                <div class="p1headerclass">
+                    <div class="p1logo" style="padding-bottom: 10px">
+                        <div class="p1-logo">
+                            <a class="navbar-brand" href="#"><img src="Logo\White@2x.png" alt="Avatar Logo"
+                                    style="width: 119px; height: 84px; margin-bottom: 2px" /></a>
+                        </div>
+                        <div class="icon-for-mobile-view-navbar">
+                            <a href="javascript:void(0);" class="icon-cart"><svg width="21px" height="19px"
+                                    viewBox="0 0 21 19" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" style="vertical-align: sub">
+                                    <g id="Page-1" stroke="none" stroke-width="1" fill="#fff" fill-rule="evenodd">
+                                        <g id="Store" transform="translate(-1313.000000, -37.000000)" fill="#fffff0"
+                                            fill-rule="nonzero">
+                                            <g id="Menu">
+                                                <path
+                                                    d="M1331.55766,42.1107848 L1331.55713,42.1012394 C1332.74194,42.0983632 1333.75665,42.9337799 1333.96291,44.0793804 C1334.1682,45.226038 1333.50442,46.3514562 1332.39001,46.7470893 L1331.32447,53.1164532 C1331.04594,54.7804772 1329.58052,56.0019184 1327.86294,55.9999977 L1319.104,55.9999977 C1317.38555,55.9999977 1315.92021,54.7736186 1315.64648,53.1066202 L1314.58289,46.7468435 C1313.48312,46.341746 1312.83306,45.2249564 1313.03737,44.0889676 C1313.24167,42.9529789 1314.24172,42.1213895 1315.41577,42.1108266 L1316.24669,42.1108266 L1319.88815,37.3912041 C1320.22152,36.9581292 1320.85009,36.8726725 1321.29096,37.2001134 C1321.73184,37.5285376 1321.81786,38.1450212 1321.48452,38.5780937 L1318.75724,42.1108659 L1328.46639,42.1108659 L1325.73911,38.5780937 C1325.40576,38.1431037 1325.49473,37.5246781 1325.93853,37.1981959 C1326.38136,36.8707477 1327.00995,36.958139 1327.34329,37.393129 L1330.977,42.1107848 L1331.55766,42.1107848 Z M1315.4162,44.0773966 C1315.17474,44.0773966 1314.97825,44.2694485 1314.97825,44.5075929 C1314.97825,44.7447761 1315.17474,44.9377892 1315.4162,44.9377892 L1331.55766,44.9377892 C1331.79912,44.9377892 1331.99561,44.7447761 1331.99561,44.5075929 C1331.99561,44.2694485 1331.79912,44.0773966 1331.55766,44.0773966 L1315.4162,44.0773966 Z M1327.8694,54.0333687 L1327.86948,54.0333687 C1328.60167,54.0333687 1329.22829,53.5138637 1329.35049,52.8042364 L1330.33684,46.904401 L1316.64212,46.904401 L1317.62848,52.8042364 C1317.75068,53.5138637 1318.37729,54.0333687 1319.11047,54.0333687 L1327.8694,54.0333687 Z M1325.97333,48.2592593 C1326.5408,48.2592593 1327,48.732412 1327,49.3148148 C1327,49.8982468 1326.5408,50.3703704 1325.97333,50.3703704 L1320.32667,50.3703704 C1319.7592,50.3703704 1319.3,49.8982468 1319.3,49.3148148 C1319.3,48.732412 1319.7592,48.2592593 1320.32667,48.2592593 L1325.97333,48.2592593 Z M1325.97333,51.0740741 C1326.5408,51.0740741 1327,51.5472269 1327,52.1296296 C1327,52.7130616 1326.5408,53.1851852 1325.97333,53.1851852 L1320.32667,53.1851852 C1319.7592,53.1851852 1319.3,52.7130616 1319.3,52.1296296 C1319.3,51.5472269 1319.7592,51.0740741 1320.32667,51.0740741 L1325.97333,51.0740741 Z"
+                                                    id="icn_basket"
+                                                    transform="translate(1323.500000, 46.500000) rotate(-360.000000) translate(-1323.500000, -46.500000) ">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg></a>
+                            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                <svg id="menu-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="20px"
+                                    height="20px">
+                                    <path fill="#ffffff"
+                                        d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 Z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 Z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 Z" />
+                                </svg>
+                                <svg id="menu-close" class="display-close" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 50 50" width="20px" height="20px">
+                                    <path fill="#ffffff"
+                                        d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="navbar navbar-expand-md navbar-light" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link linkactive fontsize16 ibm-plex-sans-semibold" href="#">HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fontsize16 ibm-plex-sans-semibold" href="#page2">ABOUT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fontsize16 ibm-plex-sans-semibold" href="#page4">PROGRAMS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fontsize16 ibm-plex-sans-semibold" href="#page3">CARRERS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fontsize16 ibm-plex-sans-semibold" href="#page8">CONTACT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fontsize16 ibm-plex-sans-semibold" href="#page5">MAP</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fontsize16 ibm-plex-sans-semibold" href="#page6">STORE</a>
+                            </li>
+                            <li class="nav-item" id="cart" style="cursor: pointer">
+                                <svg width="21px" height="19px" viewBox="0 0 21 19" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    style="vertical-align: -webkit-baseline-middle">
+                                    <g id="Page-1" stroke="none" stroke-width="1">
+                                        <g id="Store" transform="translate(-1313.000000, -37.000000)">
+                                            <g id="Menu">
+                                                <path
+                                                    d="M1331.55766,42.1107848 L1331.55713,42.1012394 C1332.74194,42.0983632 1333.75665,42.9337799 1333.96291,44.0793804 C1334.1682,45.226038 1333.50442,46.3514562 1332.39001,46.7470893 L1331.32447,53.1164532 C1331.04594,54.7804772 1329.58052,56.0019184 1327.86294,55.9999977 L1319.104,55.9999977 C1317.38555,55.9999977 1315.92021,54.7736186 1315.64648,53.1066202 L1314.58289,46.7468435 C1313.48312,46.341746 1312.83306,45.2249564 1313.03737,44.0889676 C1313.24167,42.9529789 1314.24172,42.1213895 1315.41577,42.1108266 L1316.24669,42.1108266 L1319.88815,37.3912041 C1320.22152,36.9581292 1320.85009,36.8726725 1321.29096,37.2001134 C1321.73184,37.5285376 1321.81786,38.1450212 1321.48452,38.5780937 L1318.75724,42.1108659 L1328.46639,42.1108659 L1325.73911,38.5780937 C1325.40576,38.1431037 1325.49473,37.5246781 1325.93853,37.1981959 C1326.38136,36.8707477 1327.00995,36.958139 1327.34329,37.393129 L1330.977,42.1107848 L1331.55766,42.1107848 Z M1315.4162,44.0773966 C1315.17474,44.0773966 1314.97825,44.2694485 1314.97825,44.5075929 C1314.97825,44.7447761 1315.17474,44.9377892 1315.4162,44.9377892 L1331.55766,44.9377892 C1331.79912,44.9377892 1331.99561,44.7447761 1331.99561,44.5075929 C1331.99561,44.2694485 1331.79912,44.0773966 1331.55766,44.0773966 L1315.4162,44.0773966 Z M1327.8694,54.0333687 L1327.86948,54.0333687 C1328.60167,54.0333687 1329.22829,53.5138637 1329.35049,52.8042364 L1330.33684,46.904401 L1316.64212,46.904401 L1317.62848,52.8042364 C1317.75068,53.5138637 1318.37729,54.0333687 1319.11047,54.0333687 L1327.8694,54.0333687 Z M1325.97333,48.2592593 C1326.5408,48.2592593 1327,48.732412 1327,49.3148148 C1327,49.8982468 1326.5408,50.3703704 1325.97333,50.3703704 L1320.32667,50.3703704 C1319.7592,50.3703704 1319.3,49.8982468 1319.3,49.3148148 C1319.3,48.732412 1319.7592,48.2592593 1320.32667,48.2592593 L1325.97333,48.2592593 Z M1325.97333,51.0740741 C1326.5408,51.0740741 1327,51.5472269 1327,52.1296296 C1327,52.7130616 1326.5408,53.1851852 1325.97333,53.1851852 L1320.32667,53.1851852 C1319.7592,53.1851852 1319.3,52.7130616 1319.3,52.1296296 C1319.3,51.5472269 1319.7592,51.0740741 1320.32667,51.0740741 L1325.97333,51.0740741 Z"
+                                                    id="icn_basket"
+                                                    transform="translate(1323.500000, 46.500000) rotate(-360.000000) translate(-1323.500000, -46.500000) ">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="page1">
+            <div class="section-container">
+                <div class="mainContent">
+                    <div class="content">
+                        <h1 class="title fontsize111 text-start ibm-plex-sans-bold-italic" style="margin-bottom: 0">
+                            JOIN THE MOVEMENT
+                        </h1>
+                        <p class="subtitle fontsize26 text-light text-start ibm-plex-sans-semibold">
+                            Strength, vigor and discipline. All in one spot.<br />Become a
+                            part of movement.
+                        </p>
+                    </div>
+                    <div class="p1buttons" style="gap: 32px; margin-left: 2px">
+                        <button type="button" class="btntextt fontsize16 paddingbtn ibm-plex-sans-bold">
+                            <span class="btn-text">BOOK A FREE CLASS</span>
+                        </button>
+                        <button type="button" class="btntxt paddingbtn2 fontsize16 ibm-plex-sans-bold">
+                            <span class="btn-text">SEE OUR PROMOTION</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page2 bg-light" id="page2">
+            <div class="section-container">
+                <div class="p2content">
+                    <div class="p2-heading">
+                        <p class="text-start fontsize59 ibm-plex-sans-bold-italic"
+                            style="padding-bottom: 34px; margin-left: -2px">
+                            The right way to get back your track
+                        </p>
+                    </div>
+                    <div class="bodyContent">
+                        <p class="p2subtitle fontsize20 ibm-plex-sans-semibold text-start">
+                            At Vigor Crossfit, our primary focus is to get you fit for life
+                            in a safe environment. <br /><br />We believe that a strong and
+                            healthy body is the foundation for the successful, fulfilling
+                            life. Wether you are new to fitness or a seasoned athelete,
+                            we're here to to guide on your path to success it.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page3" id="page3">
+            <div class="p3container" style="overflow: hidden;">
+                <div class="slider text-center text-light" style="margin-bottom: 0;">
+                    <div class="p3slide1" style="background-image: url('1.png')">
+                        <div class="upper">
+                            <h2 class="p3title fontsize59 ibm-plex-sans-bold-italic">We got you. Seriously.</h2>
+                            <p class="p3subtitle fontsize20 ibm-plex-sans-medium">Team
+                                of our first class rockstar
+                                trainers, got you covered.<br>
+                                Health plans, strength
+                                training... you name it.</p>
+                        </div>
+                        <div class="lower" style="    margin-top: 33px;">
+                            <div>
+                                <h3 class="ibm-plex-sans-bold fontsize20" style="margin: 2px;">Arinjay Mohanty</h3>
+                            </div>
+                            <div>
+                                <p class="fontsize16 ibm-plex-sans-semibold"
+                                    style="line-height: 25px; margin-top: 12px;">2018
+                                    Olympic weightlifting champion,<br> 2016 Crossfit Games finalist,
+                                    2013 Crossfit Games -
+                                    2nd
+                                    place</p>
+                            </div>
+                            <div>
+                                <p class="fontsize16 colortext ibm-plex-sans-bold"
+                                    style="margin-left:2px; margin-top: 22px; margin-bottom: 57px;">MEET ALL OUR
+                                    EXPERTS
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p3slide2" style="background-image: url('1.png')">
+                        <div class="upper">
+                            <h2 class="p3title fontsize59 ibm-plex-sans-bold-italic">We got you. Seriously.</h2>
+                            <p class="p3subtitle fontsize20 ibm-plex-sans-medium">Team
+                                of our first class
+                                rockstar trainers, got you covered.<br>
+                                Health plans, strength
+                                training... you name it.</p>
+                        </div>
+                        <div class="lower" style="    margin-top: 33px;">
+                            <div>
+                                <h3 class="ibm-plex-sans-bold fontsize20" style="margin: 2px;">Ali</h3>
+                            </div>
+                            <div>
+                                <p class="fontsize16 ibm-plex-sans-semibold"
+                                    style="line-height: 25px; margin-top: 12px;">2018
+                                    Olympic weightlifting champion,<br> 2016 Crossfit Games finalist,
+                                    2013 Crossfit Games -
+                                    2nd
+                                    place</p>
+                            </div>
+                            <div>
+                                <p class="fontsize16 colortext ibm-plex-sans-bold"
+                                    style="margin-left:2px; margin-top: 22px; margin-bottom: 57px;">MEET ALL OUR
+                                    COACHES
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p3slide3" style="background-image: url('1.png')">
+                        <div class="upper">
+                            <h2 class="p3title fontsize59 ibm-plex-sans-bold-italic">We got you. Seriously.</h2>
+                            <p class="p3subtitle fontsize20 ibm-plex-sans-medium">Team
+                                of our first class rockstar
+                                trainers, got you covered.<br>
+                                Health plans, strength
+                                training... you name it.</p>
+                        </div>
+                        <div class="lower" style="    margin-top: 33px;">
+                            <div>
+                                <h3 class="ibm-plex-sans-bold fontsize20" style="margin: 2px;">A D</h3>
+                            </div>
+                            <div>
+                                <p class="fontsize16 ibm-plex-sans-semibold"
+                                    style="line-height: 25px; margin-top: 12px;">2018
+                                    Olympic weightlifting champion,<br> 2016 Crossfit Games finalist,
+                                    2013 Crossfit Games -
+                                    2nd
+                                    place</p>
+                            </div>
+                            <div>
+                                <p class="fontsize16 colortext ibm-plex-sans-bold"
+                                    style="margin-left:2px; margin-top: 22px; margin-bottom: 57px;">MEET ALL OUR
+                                    COACHES
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page4" id="page4">
+            <div class="section-container">
+                <div class="pg4-content">
+                    <div class="p4title">
+                        <p class="fontsize59 p4-title headingstyle text-center ibm-plex-sans-bold-italic"
+                            style="margin-right: 20px">
+                            Find the right plan
+                        </p>
+                    </div>
+                    <div class="p4body ibm-plex-sans-semibold">
+                        <div class="p4beginner">
+                            <div class="p4beginnerpage ibm-plex-sans-semibold">
+                                <div class="p4-tablediv">
+                                    <div>
+                                        <p class="fontsize26 text-start">BEGINNER</p>
+                                    </div>
+                                    <div class="fontsize20">
+                                        <div class="table-elements">
+                                            <div>2 times per week</div>
+                                            <div>
+                                                <img src="Icons\Checkmark\Yellow.svg" alt="yellow" />
+                                            </div>
+                                        </div>
+                                        <div class="table-elements">
+                                            <div>Stretching</div>
+                                            <div>
+                                                <img src="Icons\Checkmark\Yellow.svg" alt="yellow" />
+                                            </div>
+                                        </div>
+                                        <div class="table-elements">
+                                            <div>Light Training</div>
+                                            <div>
+                                                <img src="Icons\Checkmark\Yellow.svg" alt="yellow" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="buttondiv text-center p4-begin-button">
+                                <button type="button" class="p4button fontsize16 p4-paddingbtn ibm-plex-sans-bold">
+                                    <span class="btn-text" id="buy_now_beginer">$200 / Month</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p4intermediate">
+                            <div class="p4intermediatepage ibm-plex-sans-semibold">
+                                <div class="p4-tablediv2">
+                                    <div>
+                                        <p class="fontsize26 text-start">INTERMEDIATE</p>
+                                    </div>
+                                    <div class="fontsize20">
+                                        <div class="table-elements">
+                                            <div>3 times per week</div>
+                                            <div>
+                                                <img src="Icons\Checkmark\Yellow.svg" alt="yellow" />
+                                            </div>
+                                        </div>
+                                        <div class="table-elements">
+                                            <div>Moderate Stretching</div>
+                                            <div>
+                                                <img src="Icons\Checkmark\Yellow.svg" alt="yellow" />
+                                            </div>
+                                        </div>
+                                        <div class="table-elements">
+                                            <div>Moderate cardio Training</div>
+                                            <div>
+                                                <img src="Icons\Checkmark\Yellow.svg" alt="yellow" />
+                                            </div>
+                                        </div>
+                                        <div class="table-elements">
+                                            <div>Food plan</div>
+                                            <div>
+                                                <img src="Icons\Checkmark\Ember.svg" alt="Ember" />
+                                            </div>
+                                        </div>
+                                        <div class="table-elements">
+                                            <div>Personal training plan</div>
+                                            <div>
+                                                <img src="Icons\Checkmark\Ember.svg" alt="Ember" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="buttondiv text-center">
+                                <button type="button" class="p4button fontsize16 p4-paddingbtn ibm-plex-sans-bold">
+                                    <span class="btn-text" id="buy_now_intermediate">$300 / Month</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p4competitive">
+                            <div class="p4competitivepage ibm-plex-sans-semibold">
+                                <div class="p4-tablediv">
+                                    <div>
+                                        <p class="fontsize26 text-start">COMPETITIVE</p>
+                                    </div>
+                                    <div class="fontsize20">
+                                        <div class="table-elements">
+                                            <div>6 times per week</div>
+                                            <div>
+                                                <img src="Icons\Checkmark\Yellow.svg" alt="yellow" />
+                                            </div>
+                                        </div>
+                                        <div class="table-elements">
+                                            <div>Core Exercises</div>
+                                            <div>
+                                                <img src="Icons\Checkmark\Yellow.svg" alt="yellow" />
+                                            </div>
+                                        </div>
+                                        <div class="table-elements">
+                                            <div>Hard cardio Training</div>
+                                            <div>
+                                                <img src="Icons\Checkmark\Yellow.svg" alt="yellow" />
+                                            </div>
+                                        </div>
+                                        <div class="table-elements">
+                                            <div>Strict Food plan</div>
+                                            <div>
+                                                <img src="Icons\Checkmark\Ember.svg" alt="Ember" />
+                                            </div>
+                                        </div>
+                                        <div class="table-elements">
+                                            <div>Personal training plan</div>
+                                            <div>
+                                                <img src="Icons\Checkmark\Ember.svg" alt="Ember" />
+                                            </div>
+                                        </div>
+                                        <div class="table-elements">
+                                            <div>Personal Trainer</div>
+                                            <div>
+                                                <img src="Icons\Checkmark\Red.svg" alt="Red" />
+                                            </div>
+                                        </div>
+                                        <div class="table-elements">
+                                            <div>Competitive Courses</div>
+                                            <div>
+                                                <img src="Icons\Checkmark\Red.svg" alt="Red" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="buttondiv text-center p4-comp-button">
+                                <button type="button" class="p4-paddingbtn fontsize16 ibm-plex-sans-bold">
+                                    <span class="btn-text" id="buy_now_competitive">$500 / Month</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page5" id="page5">
+            <div class="section-container pg5-section">
+                <button id="showPopupButton" style="background: transparent"></button>
+                <button id="showPopupButton2" style="background: transparent"></button>
+                <button id="showPopupButton3" style="background: transparent"></button>
+                <div class="p5container" onclick="closepopup()">
+                    <div class="p5title text-center">
+                        <p class="fontsize59 text-center ibm-plex-sans-bold-italic"
+                            style="letter-spacing: -2.95px; line-height: 60px">
+                            Come and stop by
+                        </p>
+
+                        <div id="popup1">
+                            <div id="closeButton" class="text-end" onclick="hidePopup1()">
+                                <a class="close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"
+                                        width="30px" height="30px">
+                                        <path
+                                            d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z" />
+                                    </svg></a>
+                            </div>
+                            <div class="content">
+                                <div class="p5popupheader">
+                                    <div class="p5popupinfo">
+                                        <div>
+                                            <p class="fontsize26 text-start ibm-plex-sans-semibold"
+                                                style="line-height: 36px; margin-bottom: 0">
+                                                Vigor XF in Outer Richmond
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <p class="fontsize16 text-start ibm-plex-sans-semibold"
+                                                style="line-height: 24px;width: 67%;margin-bottom: 0;">
+                                                4046 Balboa St, San Francisco, CA 94121, USA
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p5popupcontent" style="margin-bottom: 0">
+                                    <table
+                                        class="table table-borderless ibm-plex-sans-semibold fontssize12 text-start pg5-table">
+                                        <tr>
+                                            <td>MON-THU</td>
+                                            <td>05:30 – 20:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>FRI</td>
+                                            <td>05:30 – 18:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>SAT</td>
+                                            <td>07:00 – 14:30</td>
+                                        </tr>
+                                        <tr>
+                                            <td>SUN</td>
+                                            <td>10:00 – 13:00</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="p5popupimages">
+                                    <a href="Images\Gallery\1.png" data-fancybox="group">
+                                        <img src="Images\Gallery\1.png" width="85px" height="85px" />
+                                    </a>
+                                    <a href="Images\Gallery\2.png" data-fancybox="group">
+                                        <img src="Images\Gallery\2.png" width="85px" height="85px" />
+                                    </a>
+                                    <a href="Images\Gallery\3.png" id="p5-image1-popup" data-fancybox="group">
+                                        <img src="Images\Gallery\3.png" width="85px" height="85px" />
+                                    </a>
+                                    <a href="Images\Gallery\4.png" id="p5-image2-popup" data-fancybox="group">
+                                        <img src="Images\Gallery\4.png" width="85px" height="85px" />
+                                    </a>
+                                    <a class="a-image" href="Images\Gallery\5.png" style="display: none"
+                                        data-fancybox="group">
+                                        <img src="Images\Gallery\5.png" width="85px" height="85px" />
+                                    </a>
+                                    <a class="a-image" href="Images\Gallery\6.png" style="display: none"
+                                        data-fancybox="group">
+                                        <img src="Images\Gallery\6.png" width="85px" height="85px" />
+                                    </a>
+                                    <a class="a-image" href="Images\Gallery\7.png" style="display: none"
+                                        data-fancybox="group">
+                                        <img src="Images\Gallery\7.png" width="85px" height="85px" />
+                                    </a>
+                                    <a class="a-image" href="Images\Gallery\8.png" style="display: none"
+                                        data-fancybox="group">
+                                        <img src="Images\Gallery\8.png" width="85px" height="85px" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="popup2">
+                        <div id="closeButton" class="text-end" onclick="hidePopup2()">
+                            <a class="close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="30px"
+                                    height="30px">
+                                    <path
+                                        d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z" />
+                                </svg></a>
+                        </div>
+                        <div class="content">
+                            <div class="p5popupheader">
+                                <div class="p5popupinfo">
+                                    <div>
+                                        <p class="fontsize26 text-start ibm-plex-sans-semibold"
+                                            style="line-height: 36px; margin-bottom: 0">
+                                            Vigor XF in Outer Richmond
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p class="fontsize16 text-start ibm-plex-sans-semibold"
+                                            style="line-height: 24px;width: 67%;margin-bottom: 0;">
+                                            4046 Balboa St, San Francisco, CA 94121, USA
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p5popupcontent" style="margin-bottom: 0">
+                                <table
+                                    class="table table-borderless ibm-plex-sans-semibold fontssize12 text-start pg5-table">
+                                    <tr>
+                                        <td>MON-THU</td>
+                                        <td>05:30 – 20:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>FRI</td>
+                                        <td>05:30 – 18:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SAT</td>
+                                        <td>07:00 – 14:30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SUN</td>
+                                        <td>10:00 – 13:00</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="p5popupimages">
+                                <a href="Images\Gallery\1.png" data-fancybox="group">
+                                    <img src="Images\Gallery\1.png" width="85px" height="85px" />
+                                </a>
+                                <a href="Images\Gallery\2.png" data-fancybox="group">
+                                    <img src="Images\Gallery\2.png" width="85px" height="85px" />
+                                </a>
+                                <a href="Images\Gallery\3.png" id="p5-image1-popup" data-fancybox="group">
+                                    <img src="Images\Gallery\3.png" width="85px" height="85px" />
+                                </a>
+                                <a href="Images\Gallery\4.png" id="p5-image2-popup" data-fancybox="group">
+                                    <img src="Images\Gallery\4.png" width="85px" height="85px" />
+                                </a>
+                                <a class="a-image" href="Images\Gallery\5.png" style="display: none"
+                                    data-fancybox="group">
+                                    <img src="Images\Gallery\5.png" width="85px" height="85px" />
+                                </a>
+                                <a class="a-image" href="Images\Gallery\6.png" style="display: none"
+                                    data-fancybox="group">
+                                    <img src="Images\Gallery\6.png" width="85px" height="85px" />
+                                </a>
+                                <a class="a-image" href="Images\Gallery\7.png" style="display: none"
+                                    data-fancybox="group">
+                                    <img src="Images\Gallery\7.png" width="85px" height="85px" />
+                                </a>
+                                <a class="a-image" href="Images\Gallery\8.png" style="display: none"
+                                    data-fancybox="group">
+                                    <img src="Images\Gallery\8.png" width="85px" height="85px" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="popup3">
+                        <div id="closeButton" class="text-end" onclick="hidePopup3()">
+                            <a class="close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="30px"
+                                    height="30px">
+                                    <path
+                                        d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z" />
+                                </svg></a>
+                        </div>
+                        <div class="content">
+                            <div class="p5popupheader">
+                                <div class="p5popupinfo">
+                                    <div>
+                                        <p class="fontsize26 text-start ibm-plex-sans-semibold"
+                                            style="line-height: 36px; margin-bottom: 0">
+                                            Vigor XF in Outer Richmond
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p class="fontsize16 text-start ibm-plex-sans-semibold"
+                                            style="line-height: 24px;width: 67%;margin-bottom: 0;">
+                                            4046 Balboa St, San Francisco, CA 94121, USA
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p5popupcontent" style="margin-bottom: 0">
+                                <table
+                                    class="table table-borderless ibm-plex-sans-semibold fontssize12 text-start pg5-table">
+                                    <tr>
+                                        <td>MON-THU</td>
+                                        <td>05:30 – 20:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>FRI</td>
+                                        <td>05:30 – 18:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SAT</td>
+                                        <td>07:00 – 14:30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SUN</td>
+                                        <td>10:00 – 13:00</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="p5popupimages">
+                                <a href="Images\Gallery\1.png" data-fancybox="group">
+                                    <img src="Images\Gallery\1.png" width="85px" height="85px" />
+                                </a>
+                                <a href="Images\Gallery\2.png" data-fancybox="group">
+                                    <img src="Images\Gallery\2.png" width="85px" height="85px" />
+                                </a>
+                                <a href="Images\Gallery\3.png" id="p5-image1-popup" data-fancybox="group">
+                                    <img src="Images\Gallery\3.png" width="85px" height="85px" />
+                                </a>
+                                <a href="Images\Gallery\4.png" id="p5-image2-popup" data-fancybox="group">
+                                    <img src="Images\Gallery\4.png" width="85px" height="85px" />
+                                </a>
+                                <a class="a-image" href="Images\Gallery\5.png" style="display: none"
+                                    data-fancybox="group">
+                                    <img src="Images\Gallery\5.png" width="85px" height="85px" />
+                                </a>
+                                <a class="a-image" href="Images\Gallery\6.png" style="display: none"
+                                    data-fancybox="group">
+                                    <img src="Images\Gallery\6.png" width="85px" height="85px" />
+                                </a>
+                                <a class="a-image" href="Images\Gallery\7.png" style="display: none"
+                                    data-fancybox="group">
+                                    <img src="Images\Gallery\7.png" width="85px" height="85px" />
+                                </a>
+                                <a class="a-image" href="Images\Gallery\8.png" style="display: none"
+                                    data-fancybox="group">
+                                    <img src="Images\Gallery\8.png" width="85px" height="85px" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page6" id="page6">
+            <div class="section-container">
+                <div class="p6container">
+                    <div class="p6maincontainer">
+                        <div class="p6textcontainer">
+                            <div class="p6heading">
+                                <p class="fontsize59 p6-heading text-start headingstyle ibm-plex-sans-bold-italic">
+                                    Share the passion
+                                </p>
+                            </div>
+                            <div class="p6content">
+                                <p class="fontsize20 text-start p6subheadingstyle ibm-plex-sans-semibold">
+                                    Support the movement by wearing the toughest gear in the
+                                    wild.<br />Represent the chapter and yourself in our latest
+                                    selected gear.
+                                </p>
+                            </div>
+                            <div class="p6browse">
+                                <a href="#" class="link-underline-light fontsize16 p6text ibm-plex-sans-bold">BROWSE OUR
+                                    SHOP</a>
+                            </div>
+                        </div>
+                        <div class="p6image1">
+                            <div style="position: relative">
+                                <img src="3.png" alt="" style="max-width: 100%" />
+                            </div>
+                            <div class="text-light text-start controller">
+                                <div class="textt">
+                                    <h4 class="fontsize20 ibm-plex-sans-medium" style="
+                        line-height: 36px;
+                        margin-bottom: -12px;
+                        width: 101%;
+                      ">
+                                        Cross Shorts WMNS
+                                    </h4>
+                                    <p class="ibm-plex-sans-bold fontsize16"
+                                        style="line-height: 36px; margin-bottom: 0; margin-top: 0">
+                                        $25.95
+                                    </p>
+                                </div>
+                                <div class="buy">
+                                    <button type="button" class="p6-image-buynow ibm-plex-sans-bold fontsize11"
+                                        style="margin-bottom: -6px; margin-right: 3px">
+                                        <span class="btn-text" id="buy_now_shorts">BUY NOW</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p6image2">
+                            <div style="position: relative">
+                                <img src="4.png" alt="" style="max-width: 100%" />
+                            </div>
+                            <div class="text-light text-start controller">
+                                <div class="textt">
+                                    <h4 class="fontsize20 ibm-plex-sans-medium"
+                                        style="line-height: 36px; margin-bottom: -12px">
+                                        Lift Heavier t-shirt
+                                    </h4>
+                                    <p class="ibm-plex-sans-bold fontsize16"
+                                        style="line-height: 36px; margin-bottom: 0; margin-top: 0">
+                                        $19.95
+                                    </p>
+                                </div>
+                                <div class="buy">
+                                    <button type="button" class="p6-image-buynow ibm-plex-sans-bold fontsize11"
+                                        style="margin-bottom: -6px; margin-right: 3px">
+                                        <span class="btn-text" id="buy_now_tshirt">BUY NOW</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page7">
+            <div class="section-container">
+                <div class="p7container">
+                    <div class="p7heading">
+                        <div class="p7-head p7headingstyle text-center fontsize59 ibm-plex-sans-bold-italic">
+                            Subscribe to our newsletter
+                        </div>
+                        <div class="p7-head p7-subheadingstyle text-center ibm-plex-sans-medium fontsize20">
+                            and get $20 off your new membership or your next order in our
+                            store.
+                        </div>
+                    </div>
+                    <div class="p7body text-center">
+                        <div class="p7-emailbar">
+                            <input type="email"
+                                class="p7-email fontsize20 ibm-plex-sans-semibold text-dark bg-light p7buttons"
+                                placeholder="name@example.com" />
+                            <button type="button"
+                                class="border-light ibm-plex-sans-bold button p7-paddingbtn p7buttons fontsize16">
+                                <span class="btn-text">SUBSCRIBE</span>
+                            </button>
+                        </div>
+                        <div class="p7bottomtext">
+                            <p class="text-center fontssize12 ibm-plex-sans-semibold" style="line-height: 24px">
+                                We dont spam. I mean… Spam is in a can. Why would We put your
+                                email in a can?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page8 w-auto" id="page8">
+            <div class="section-container">
+                <div class="text-light p8container">
+                    <div class="p8image">
+                        <image src="Logo\Special.svg" alt="logo" style="height: 180px; width: 150px"></image>
+                    </div>
+                    <div class="p8-content">
+                        <div id="aBOUT" class="p8about">
+                            <p class="ibm-plex-sans-semibold" style="margin-bottom: 14px">
+                                ABOUT
+                            </p>
+                            <p class="p8color fontssize12 ibm-plex-sans-medium">
+                                Vigor Health inc.
+                            </p>
+                            <p class="p8color fontssize12 ibm-plex-sans-medium">
+                                1190 Mission St
+                            </p>
+                            <p class="p8color fontssize12 ibm-plex-sans-medium">
+                                San Francisco
+                            </p>
+                            <p class="p8color fontssize12 ibm-plex-sans-medium">CA 94103</p>
+                            <p class="p8color fontssize12 ibm-plex-sans-medium">USA</p>
+                        </div>
+                        <div id="sITEMAP" class="p8sitemap" style="margin-right: 11px">
+                            <p class="ibm-plex-sans-semibold" style="margin-bottom: 14px">
+                                SITEMAP
+                            </p>
+                            <p>
+                                <a href="#" class="p8links p8color fontssize12 ibm-plex-sans-medium">ABOUT</a>
+                            </p>
+                            <p>
+                                <a href="#" class="p8links p8color fontssize12 ibm-plex-sans-medium">PROGRAMS</a>
+                            </p>
+                            <p>
+                                <a href="#" class="p8links p8color fontssize12 ibm-plex-sans-medium">CARRERS</a>
+                            </p>
+                            <p>
+                                <a href="#" class="p8links p8color fontssize12 ibm-plex-sans-medium">CONTACT</a>
+                            </p>
+                            <p>
+                                <a href="#" class="p8links p8color fontssize12 ibm-plex-sans-medium">STORE</a>
+                            </p>
+                        </div>
+                        <div id="sOCIAL" class="p8social" style="margin-right: 6px">
+                            <p class="ibm-plex-sans-semibold" style="margin-bottom: 14px">
+                                SOCIAL
+                            </p>
+                            <p>
+                                <a class="p8links fontssize12 ibm-plex-sans-medium" href="https://twitter.com/"
+                                    target="_blank">TWITTER</a>
+                            </p>
+                            <p>
+                                <a class="p8links fontssize12 ibm-plex-sans-medium" href="https://instagram.com/"
+                                    target="_blank">INSTAGRAM</a>
+                            </p>
+                            <p>
+                                <a class="p8links fontssize12 ibm-plex-sans-medium" href="https://facebook.com"
+                                    target="_blank">FACEBOOK</a>
+                            </p>
+                            <p>
+                                <a class="p8links fontssize12 ibm-plex-sans-medium" href="https://youtube.com"
+                                    target="_blank">YOUTUBE</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
